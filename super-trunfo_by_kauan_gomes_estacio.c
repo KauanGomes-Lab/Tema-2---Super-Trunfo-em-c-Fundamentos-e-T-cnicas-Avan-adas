@@ -221,5 +221,4 @@ int main () {
   printf("\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n"); 
   	
 return 0;
-
 }
