@@ -1,15 +1,24 @@
 #include <stdio.h>
 
 int main() {
+
   char estado_a[25],estado_b[25],codigo_a[25],codigo_b[25],cidade_a[25],cidade_b[25];
-  float area_cidade_a,area_cidade_b,pib_cidade_a,pib_cidade_b,densidade_populacional_cidade_a,densidade_populacional_cidade_b,
-  pib_per_capta_cidade_a,pib_per_capta_cidade_b,super_poder_carta_a,super_poder_carta_b;
-  int pontos_turisticos_a,pontos_turisticos_b;
-  unsigned long int populacao_cidade_a,populacao_cidade_b;
-  int populacao_cidade_a_covertido,populacao_cidade_b_covertido;
   
-  populacao_cidade_a_covertido = (int)populacao_cidade_a;
-  populacao_cidade_b_covertido = (int)populacao_cidade_b;
+  float area_cidade_a,area_cidade_b,// Variavel que Armazena a Area Digitados.
+  pib_cidade_a,pib_cidade_b, // Variavel que Armazena o PIB.
+  densidade_populacional_cidade_a,densidade_populacional_cidade_b, // Variavel que Armazena a Densidade Populacional.
+  pib_per_capta_cidade_a,pib_per_capta_cidade_b, // Variavel que Armazena PIB Per Capta.
+  super_poder_carta_a,super_poder_carta_b; // Variavel que Armazena o Super Poder.
+  
+  int pontos_turisticos_a,pontos_turisticos_b; // Variavel que Armazena o Numero de Pontos Turiscos.
+  
+  unsigned long int populacao_cidade_a,populacao_cidade_b; // Variavel que Armazena a População em unsigned long int.
+  
+  int populacao_cidade_a_covertido,populacao_cidade_b_covertido; // Variavel que Armazena a Variavel acima em valores INT Convertidos .
+  
+  populacao_cidade_a_covertido = (int)populacao_cidade_a; // Função Para Converter Carta A.
+  
+  populacao_cidade_b_covertido = (int)populacao_cidade_b; // Função Para Converter Carta B.
   
   printf("\n-----------  Super Trunfo - Mestre  -----------");
   
