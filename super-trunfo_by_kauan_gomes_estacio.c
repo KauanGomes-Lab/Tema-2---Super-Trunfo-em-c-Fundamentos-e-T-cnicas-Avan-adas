@@ -2,11 +2,16 @@
 
 int main() {
   char estado_a[25],estado_b[25],codigo_a[25],codigo_b[25],cidade_a[25],cidade_b[25];
-  float area_cidade_a,area_cidade_b,pib_cidade_a,pib_cidade_b,densidade_populacional_cidade_a,
-  densidade_populacional_cidade_b,pib_per_capta_cidade_a,pib_per_capta_cidade_b;
-  int populacao_cidade_a,populacao_cidade_b,pontos_turisticos_a,pontos_turisticos_b;
+  float area_cidade_a,area_cidade_b,pib_cidade_a,pib_cidade_b,densidade_populacional_cidade_a,densidade_populacional_cidade_b,
+  pib_per_capta_cidade_a,pib_per_capta_cidade_b,super_poder_carta_a,super_poder_carta_b;
+  int pontos_turisticos_a,pontos_turisticos_b;
+  unsigned long int populacao_cidade_a,populacao_cidade_b;
+  int populacao_cidade_a_covertido,populacao_cidade_b_covertido;
   
-  printf("\n-----------  Super Trunfo - Aventureiro  -----------");
+  populacao_cidade_a_covertido = (int)populacao_cidade_a;
+  populacao_cidade_b_covertido = (int)populacao_cidade_b;
+  
+  printf("\n-----------  Super Trunfo - Mestre  -----------");
   
   printf("\n\n-----------  Carta A: -----------");
   
@@ -20,7 +25,7 @@ int main() {
   fgets(cidade_a, sizeof(cidade_a), stdin);
   
   printf("\nPopulação da Cidade da Carta A: ");
-  scanf("%d", &populacao_cidade_a);
+  scanf("%lu", &populacao_cidade_a);
   
   printf("\nDigite à Área da Cidade da Carta A: ");
   scanf("%f", &area_cidade_a);
@@ -43,7 +48,7 @@ int main() {
   fgets(cidade_b, sizeof(cidade_b), stdin);
   
   printf("\nPopulação da Cidade da Carta B: ");
-  scanf("%d", &populacao_cidade_b);
+  scanf("%lu", &populacao_cidade_b);
   
   printf("\nDigite à Área da Cidade da Carta B: ");
   scanf("%f", &area_cidade_b);
@@ -66,25 +71,118 @@ int main() {
   printf("\nEstado : %s" , estado_a);
   printf("Codigo : %s", codigo_a);
   printf("Nome da Cidade: %s", cidade_a);
-  printf("População : %d Habitantes\n", populacao_cidade_a);
-  printf("Área : %.2f (Km²).\n", area_cidade_a);
-  printf("PIB : %.2f\n", pib_cidade_a);
-  printf("Número de Pontos Turísticos : %d\n", pontos_turisticos_a);
-  printf("Densidade Populacional : %.2f hab/km²\n", densidade_populacional_cidade_a);
-  printf("PIB per Capita : %.2f Reais\n", pib_per_capta_cidade_a);
+  printf("População : %d Habitantes.\n", populacao_cidade_a);
+  printf("Área : %.2f Km².\n", area_cidade_a);
+  printf("PIB : %.2f.\n", pib_cidade_a);
+  printf("Número de Pontos Turísticos : %d.\n", pontos_turisticos_a);
+  printf("Densidade Populacional : %.2f hab/km².\n", densidade_populacional_cidade_a);
+  printf("PIB per Capita : %.2f Reais.\n", pib_per_capta_cidade_a);
   
   printf("\n-----------  Carta B:  -----------\n");
   printf("\nEstado : %s" , estado_b);
   printf("Codigo : %s", codigo_b);
   printf("Nome da Cidade : %s", cidade_b);
   printf("População : %d Habitantes.\n", populacao_cidade_b);
-  printf("Área : %.2f (Km²).\n", area_cidade_b);
-  printf("PIB : %.2f Bilhões de Reais.\n", pib_cidade_b);
-  printf("Número de Pontos Turísticos : %d\n", pontos_turisticos_b);
-  printf("Densidade Populacional : %.2f hab/km²\n", densidade_populacional_cidade_b);
-  printf("PIB per Capita : %.2f Reais\n", pib_per_capta_cidade_b);
+  printf("Área : %.2f Km².\n", area_cidade_b);
+  printf("PIB : %.2f.\n", pib_cidade_b);
+  printf("Número de Pontos Turísticos : %d.\n", pontos_turisticos_b);
+  printf("Densidade Populacional : %.2f hab/km².\n", densidade_populacional_cidade_b);
+  printf("PIB per Capita : %.2f Reais.\n\n\n", pib_per_capta_cidade_b);
   
-  printf("\n\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n");
+  printf("-----------  Comparação de Cartas:  -----------\n\n");
+  
+  if (populacao_cidade_a > populacao_cidade_b) {
+  printf("População: Carta A Venceu (1).\n");
+  }
+  
+  if (populacao_cidade_b > populacao_cidade_a) {
+  printf("População: Carta B Venceu (0).\n");
+  }
+  
+  if (populacao_cidade_a == populacao_cidade_b || populacao_cidade_b == populacao_cidade_a) {
+  printf("População: Empatados.\n");
+  }
+ 
+  if (area_cidade_a > area_cidade_b) {
+  printf("Área: Carta A Venceu (1).\n");
+  } 
+  
+  if (area_cidade_b > area_cidade_a) {
+  printf("Área: Carta B Venceu (0).\n");
+  }
+  
+  if (area_cidade_a == area_cidade_b || area_cidade_b == area_cidade_a) {
+  printf("Área: Empatados.\n");
+  } 
+  
+  if (pib_cidade_a > pib_cidade_b) {
+  printf("PIB: Carta A Venceu (1).\n");
+  }
+  
+  if (pib_cidade_b > pib_cidade_a) {
+  printf("PIB: Carta B Venceu (0).\n");
+  }
+  
+  if (pib_cidade_a == pib_cidade_b || pib_cidade_b == pib_cidade_a) {
+  printf("PIB: Empatados.\n");
+  }
+  
+  if (pontos_turisticos_a > pontos_turisticos_b) {
+  printf("Pontos Turísticos: Carta A Venceu (1).\n");
+  }
+  
+  if (pontos_turisticos_b > pontos_turisticos_a) {
+  printf("Pontos Turísticos: Carta B Venceu (0).\n");
+  }
+  
+  if (pontos_turisticos_a == pontos_turisticos_b || pontos_turisticos_b == pontos_turisticos_a) {
+  printf("Pontos Turísticos: Empatados.\n");
+  }
+  
+  if (densidade_populacional_cidade_a < densidade_populacional_cidade_b) {
+  printf("Densidade Populacional: Carta A Venceu (1).\n");
+  }
+
+  if (densidade_populacional_cidade_a > densidade_populacional_cidade_b) {
+  printf("Densidade Populacional: Carta B Venceu (0).\n");
+  }
+  
+  if (densidade_populacional_cidade_a == densidade_populacional_cidade_b || densidade_populacional_cidade_b == densidade_populacional_cidade_a) {
+  printf("Densidade Populacional: Empatados.\n");
+  }
+  
+  if (pib_per_capta_cidade_a > pib_per_capta_cidade_b) {
+  printf("PIB Per Capita: Carta A Venceu (1).\n");
+  }
+  
+  if (pib_per_capta_cidade_b > pib_per_capta_cidade_a) {
+  printf("PIB Per Capita: Carta B Venceu (0).\n");
+  }
+  
+  if (pib_per_capta_cidade_a == pib_per_capta_cidade_b || pib_per_capta_cidade_b == pib_per_capta_cidade_a) {
+  printf("PIB Per Capta : Empatados.\n");
+  }
+  
+  super_poder_carta_a = 1 / densidade_populacional_cidade_a + area_cidade_a + pib_cidade_a + populacao_cidade_a + pontos_turisticos_a + pib_per_capta_cidade_a;
+  super_poder_carta_b = 1 / densidade_populacional_cidade_b + area_cidade_b + pib_cidade_b + populacao_cidade_b + pontos_turisticos_b + pib_per_capta_cidade_b;
+  
+  printf("\n-----------  Resultado Super Poder:  -----------\n");
+  printf("\nCarta A: %.2f Pontos.\n",super_poder_carta_a);
+  printf("Carta B: %.2f Pontos.\n",super_poder_carta_b);
+  
+  if (super_poder_carta_a > super_poder_carta_b) {
+  printf("\nResultado Final Super Poder : Carta A Venceu (1).\n");
+  }
+  
+  if (super_poder_carta_b > super_poder_carta_a) {
+  printf("\n\nResultado Final Super Poder : Carta B Venceu (0).\n");
+  }
+  
+  if (super_poder_carta_a == super_poder_carta_b || super_poder_carta_b == super_poder_carta_a) {
+  printf("\n\nResultado Final Super Poder : Empatados.\n");
+  }
+  
+  printf("\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n");
   	
   return 0;
 }
