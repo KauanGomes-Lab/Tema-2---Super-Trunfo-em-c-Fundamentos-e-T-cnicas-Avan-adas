@@ -4,27 +4,39 @@
 
 #include <stdio.h>
 
-int main() {
+int main () {
 
-  char estado_a[25],estado_b[25],codigo_a[25],codigo_b[25],cidade_a[25],cidade_b[25];
+  char estado_a[50], // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
+  estado_b[50], // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
+  codigo_a[50], // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
+  codigo_b[50], // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
+  cidade_a[50], // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
+  cidade_b[50]; // As Variavel Tem o Valor 50 Pois Podem Armazenar Até 49 Caracteres.
   
-  float area_cidade_a,area_cidade_b, // Variavel que Armazena a Area Digitados.
-  pib_cidade_a,pib_cidade_b, // Variavel que Armazena o PIB.
-  densidade_populacional_cidade_a,densidade_populacional_cidade_b, // Variavel que Armazena a Densidade Populacional.
-  pib_per_capta_cidade_a,pib_per_capta_cidade_b, // Variavel que Armazena PIB Per Capta.
-  super_poder_carta_a,super_poder_carta_b; // Variavel que Armazena o Super Poder.
+  float area_cidade_a, // Variavel que Armazena a Area Digitados A.
+  area_cidade_b, // Variavel que Armazena a Area Digitados B.
+  pib_cidade_a, // Variavel que Armazena o PIB A.
+  pib_cidade_b, // Variavel que Armazena o PIB B.
+  densidade_populacional_cidade_a, // Variavel que Armazena a Densidade Populacional A.
+  densidade_populacional_cidade_b, // Variavel que Armazena a Densidade Populacional B.
+  pib_per_capta_cidade_a, // Variavel que Armazena PIB Per Capta A.
+  pib_per_capta_cidade_b, // Variavel que Armazena PIB Per Capta B.
+  super_poder_carta_a, // Variavel que Armazena o Super Poder A.
+  super_poder_carta_b; // Variavel que Armazena o Super Poder B.
   
-  int pontos_turisticos_a,pontos_turisticos_b; // Variavel que Armazena o Numero de Pontos Turiscos.
+  int pontos_turisticos_a, // Variavel que Armazena o Numero de Pontos Turiscos A.
+  pontos_turisticos_b; // Variavel que Armazena o Numero de Pontos Turiscos B.
   
-  unsigned long int populacao_cidade_a,populacao_cidade_b; // Variavel que Armazena a População em unsigned long int.
+  unsigned long int populacao_cidade_a, // Variavel que Armazena a População em unsigned long int A.
+  populacao_cidade_b; // Variavel que Armazena a População em unsigned long int B.
   
-  int populacao_cidade_a_covertido,populacao_cidade_b_covertido; // Variavel que Armazena a Variavel acima em valores INT Convertidos .
+  int populacao_cidade_a_covertido, // Variavel que Armazena a Variavel acima em valores INT Convertidos A.
+  populacao_cidade_b_covertido; // Variavel que Armazena a Variavel acima em valores INT Convertidos B.
   
-  populacao_cidade_a_covertido = (int)populacao_cidade_a; // Função Para Converter Carta A.
+  populacao_cidade_a_covertido = (int)populacao_cidade_a; // Função Para Converter o Valor da População da Carta A.
+  populacao_cidade_b_covertido = (int)populacao_cidade_b; // Função Para Converter o Valor da População da Carta B.
   
-  populacao_cidade_b_covertido = (int)populacao_cidade_b; // Função Para Converter Carta B.
-  
-  printf("\n-----------  Super Trunfo - Mestre  -----------");
+  printf("\n-----------  Super Trunfo - Mestre -----------"); // Versão Mestre Tema 2 - Super Trunfo.
   
   printf("\n\n-----------  Carta A: -----------"); // Entrada Dos Dados Carta A:
   
@@ -208,5 +220,6 @@ int main() {
   // Contato.
   printf("\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n"); 
   	
-  return 0;
+return 0;
+
 }
