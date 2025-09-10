@@ -6,4 +6,4 @@ Atenção :
       Ao Professor : Super Trunfo de Nível Aventureiro Foi Publicado em 09/09/2025.
       Ao Professor : Super Trunfo de Nível Aventureiro Foi Publicado em 10/09/2025.
 
-      Vou disponibilizar os arquivos Separados por classe : (Iniciante , Aventureiro e Mestre).
+      Vou disponibilizar os arquivos Separados por classe : (Iniciante , Aventureiro e Mestre) Em Um Arquivo .Zip.
