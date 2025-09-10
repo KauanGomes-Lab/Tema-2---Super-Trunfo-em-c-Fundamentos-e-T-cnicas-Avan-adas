@@ -1,10 +1,14 @@
+// OBS: AO Professor: Fui Obrigado a usar a função 'fgets' pois a função 'scanf' não atendia a meus requisitos como pegar o caractere de espaço em palavras das cidades como " São Paulo. " Por Exemplo - Peço Desculpas Desde já.
+
+// Usei a função getchar na linha 48 para pegar o valor da variavel e retornalo como int.
+
 #include <stdio.h>
 
 int main() {
 
   char estado_a[25],estado_b[25],codigo_a[25],codigo_b[25],cidade_a[25],cidade_b[25];
   
-  float area_cidade_a,area_cidade_b,// Variavel que Armazena a Area Digitados.
+  float area_cidade_a,area_cidade_b, // Variavel que Armazena a Area Digitados.
   pib_cidade_a,pib_cidade_b, // Variavel que Armazena o PIB.
   densidade_populacional_cidade_a,densidade_populacional_cidade_b, // Variavel que Armazena a Densidade Populacional.
   pib_per_capta_cidade_a,pib_per_capta_cidade_b, // Variavel que Armazena PIB Per Capta.
@@ -22,33 +26,33 @@ int main() {
   
   printf("\n-----------  Super Trunfo - Mestre  -----------");
   
-  printf("\n\n-----------  Carta A: -----------");
+  printf("\n\n-----------  Carta A: -----------"); // Entrada Dos Dados Carta A:
   
   printf("\n\nDigite o Estado da Carta A (A à H): "); 
-  fgets(estado_a, sizeof(estado_a), stdin);
+  fgets(estado_a, sizeof(estado_a), stdin); 
   
   printf("\nDigite o Codigo da Carta A: "); 
-  fgets(codigo_a, sizeof(codigo_a), stdin);
+  fgets(codigo_a, sizeof(codigo_a), stdin); 
   
   printf("\nDigite o Nome da Cidade da Carta A: "); 
-  fgets(cidade_a, sizeof(cidade_a), stdin);
+  fgets(cidade_a, sizeof(cidade_a), stdin); 
   
   printf("\nPopulação da Cidade da Carta A: ");
-  scanf("%lu", &populacao_cidade_a);
+  scanf("%lu", &populacao_cidade_a); 
   
   printf("\nDigite à Área da Cidade da Carta A: ");
-  scanf("%f", &area_cidade_a);
+  scanf("%f", &area_cidade_a); 
   
   printf("\nDigite o PIB da Cidade da Carta A: ");
   scanf("%f", &pib_cidade_a);
   
   printf("\nDigite o Número de Pontos Turísticos da Cidade da Carta A: ");
-  scanf("%d", &pontos_turisticos_a);getchar();
+  scanf("%d", &pontos_turisticos_a);getchar(); // Explicação do Porque Usei a Função "getchar" na Linha 3.
   
-  printf("\n-----------  Carta B: -----------");
+  printf("\n-----------  Carta B: -----------"); // Entrada Dos Dados Carta B:
   
   printf("\n\nDigite o Estado da Carta B (A à H): "); 
-  fgets(estado_b, sizeof(estado_b), stdin);
+  fgets(estado_b, sizeof(estado_b), stdin); // Explicação do Porque Usei a Função "fgets" inves da Função "scanf" na Linha 1.
   
   printf("\nDigite o Codigo da Carta B: "); 
   fgets(codigo_b, sizeof(codigo_b), stdin);
@@ -68,14 +72,17 @@ int main() {
   printf("\nDigite o Número de Pontos Turísticos da Cidade da Carta B: ");
   scanf("%d", &pontos_turisticos_b);
   
+  // Formula do Calculo de Desnsidade Populacional de Ambas as Cartas:
   densidade_populacional_cidade_a = populacao_cidade_a / area_cidade_a;
   densidade_populacional_cidade_b = populacao_cidade_b / area_cidade_b;
+  
+  // Formula do Calculo de PIB Per Capta das Cartas:
   pib_per_capta_cidade_a = pib_cidade_a / populacao_cidade_a;
   pib_per_capta_cidade_b = pib_cidade_b / populacao_cidade_b;
   
   printf("\n-----------  Resultado  -----------\n");
   
-  printf("\n\n-----------  Carta A:  -----------\n");
+  printf("\n\n-----------  Carta A:  -----------\n"); // Impressão dos dados Carta A:
   
   printf("\nEstado : %s" , estado_a);
   printf("Codigo : %s", codigo_a);
@@ -87,7 +94,8 @@ int main() {
   printf("Densidade Populacional : %.2f hab/km².\n", densidade_populacional_cidade_a);
   printf("PIB per Capita : %.2f Reais.\n", pib_per_capta_cidade_a);
   
-  printf("\n-----------  Carta B:  -----------\n");
+  printf("\n-----------  Carta B:  -----------\n"); // Impressão dos dados Carta B:
+  
   printf("\nEstado : %s" , estado_b);
   printf("Codigo : %s", codigo_b);
   printf("Nome da Cidade : %s", cidade_b);
@@ -98,7 +106,7 @@ int main() {
   printf("Densidade Populacional : %.2f hab/km².\n", densidade_populacional_cidade_b);
   printf("PIB per Capita : %.2f Reais.\n\n\n", pib_per_capta_cidade_b);
   
-  printf("-----------  Comparação de Cartas:  -----------\n\n");
+  printf("-----------  Comparação de Cartas:  -----------\n\n"); // Condiçoes para comparação das Cartas:
   
   if (populacao_cidade_a > populacao_cidade_b) {
   printf("População: Carta A Venceu (1).\n");
@@ -172,14 +180,20 @@ int main() {
   printf("PIB Per Capta : Empatados.\n");
   }
   
+  // Definição da Formula do calculo de Super Poder.
   super_poder_carta_a = 1 / densidade_populacional_cidade_a + area_cidade_a + pib_cidade_a + populacao_cidade_a + pontos_turisticos_a + pib_per_capta_cidade_a;
+  
+  // Definição da Formula do calculo de Super Poder.
   super_poder_carta_b = 1 / densidade_populacional_cidade_b + area_cidade_b + pib_cidade_b + populacao_cidade_b + pontos_turisticos_b + pib_per_capta_cidade_b;
   
   printf("\n-----------  Resultado Super Poder:  -----------\n");
+  
+  // Pontos do Super Poder das Cartas: 
   printf("\nCarta A: %.2f Pontos.\n",super_poder_carta_a);
   printf("Carta B: %.2f Pontos.\n",super_poder_carta_b);
   
-  if (super_poder_carta_a > super_poder_carta_b) {
+  // Condição Final do Super Poder.
+  if (super_poder_carta_a > super_poder_carta_b) {  
   printf("\nResultado Final Super Poder : Carta A Venceu (1).\n");
   }
   
@@ -191,7 +205,8 @@ int main() {
   printf("\n\nResultado Final Super Poder : Empatados.\n");
   }
   
-  printf("\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n");
+  // Contato.
+  printf("\n----------- © Criado Por: Kauan Gomes.  |  Github: ( https://github.com/KauanGomes-Lab ) © -----------\n"); 
   	
   return 0;
 }
